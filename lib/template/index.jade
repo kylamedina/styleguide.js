@@ -3,24 +3,29 @@ html
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
-
+    script(src='head.min.js')
+    script(src='holder.min.js')
     title Styleguide
 
     style
-      |!{ templateCss }
-  body
+      include:styl styleguide.styl
+
+  body(class = currentPath)
     .container
       h1.title-large Styleguide
       time.generated Generated at #{Date()}
 
-      hr.small
-
+      hr
+      
       nav.nav
         ul
           for elements, section in docs
             li
               a(href="##{section.replace(/[^a-z0-9]/ig,'')}") #{section}
-
+              ul
+                for element, i in elements
+                  if element.visible != 'false'
+                    li #{element.title}
 
       for elements, section in docs
         .section(id=section.replace(/[^a-z0-9]/ig,''))
@@ -34,30 +39,32 @@ html
                 if element.description
                   .description !{marked(element.description)}
 
-                if element.example
+                if element.html
+                  .html-source(style='display:none')= element.html
                   .preview
                     iframe(scrolling="no")
-
+                if element.example
                   .source.hidden
                     if Array.isArray(element.example)
                       | !{element.example.join(' ').trim()}
                     else
                       | !{element.example.trim()}
 
-          hr.small
+          hr
+      .markdown-container
+        //- include:md README.md
+        nav.index
+          ul
+            for elements, section in docs
+              li
+                a(href="##{section.replace(/[^a-z0-9]/ig,'')}") #{section}
+                ul
+                  for element, i in elements
+                    if element.visible != 'false'
+                      li #{element.title}
 
-      nav.index
-        ul
-          for elements, section in docs
-            li
-              a(href="##{section.replace(/[^a-z0-9]/ig,'')}") #{section}
-              ul
-                for element, i in elements
-                  if element.visible != 'false'
-                    li #{element.title}
-
-      textarea.sourceCss= css
       textarea.sourceJs= js
+      textarea.sourceCss= css
 
     script
       |!{ templateJs }

@@ -10,11 +10,14 @@
   "bugs": {
     "url": "https://github.com/eightmedia/styleguide.js/issues"
   },
-  "author": "Eight Media",
+  "author": {
+    "name": "Eight Media"
+  },
   "license": "MIT",
   "dependencies": {
     "consolidate": "~0.10.0",
     "css-parse": "*",
+    "gulp": "^3.9.0",
     "highlight.js": "^8.1.0",
     "jade": "~1.1.4",
     "js-beautify": "^1.5.1",
@@ -26,5 +29,31 @@
   "devDependencies": {
     "cheerio": "^0.17.0",
     "nodeunit": "^0.9.0"
-  }
+  },
+  "gitHead": "9b3723fef8eef60065ed27db4b8732676bb3bad9",
+  "_id": "styleguidejs@0.1.9",
+  "_shasum": "18120fe22509ba35a8a52661efe79f811b1f87e0",
+  "_from": "styleguidejs@*",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "aratramba",
+    "email": "aratramba@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "jtangelder",
+      "email": "j.tangelder@gmail.com"
+    },
+    {
+      "name": "aratramba",
+      "email": "aratramba@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "18120fe22509ba35a8a52661efe79f811b1f87e0",
+    "tarball": "http://registry.npmjs.org/styleguidejs/-/styleguidejs-0.1.9.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/styleguidejs/-/styleguidejs-0.1.9.tgz",
+  "readme": "ERROR: No README data found!"
 }
