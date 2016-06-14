@@ -67,7 +67,7 @@ exports.styleguide = {
         var sg = new StyleGuide();
         sg.addFile("test/fixtures/default/style.css");
         sg.render({
-            template: "test/fixtures/template/index.jade",
+            template: "test/fixtures/template/index.pug",
             templateCss: "test/fixtures/template/style.css",
             templateJs: "test/fixtures/template/script.js",
             outputFile: "test/tmp/template.html"

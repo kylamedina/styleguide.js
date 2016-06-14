@@ -15,16 +15,16 @@
   },
   "license": "MIT",
   "dependencies": {
-    "consolidate": "~0.10.0",
-    "css-parse": "*",
-    "gulp": "^3.9.0",
-    "highlight.js": "^8.1.0",
-    "jade": "~1.1.4",
-    "js-beautify": "^1.5.1",
-    "js-yaml": "*",
-    "lodash": "^2.4.1",
-    "marked": "~0.3.0",
-    "mkdirp": "^0.5.0"
+    "consolidate": "^0.10.0",
+    "css-parse": "^2.0.0",
+    "gulp": "^3.9.1",
+    "highlight.js": "^8.9.1",
+    "js-beautify": "^1.6.3",
+    "js-yaml": "^3.6.1",
+    "lodash": "^2.4.2",
+    "marked": "^0.3.5",
+    "mkdirp": "^0.5.1",
+    "pug": "~2.0.0-alpha6"
   },
   "devDependencies": {
     "cheerio": "^0.17.0",

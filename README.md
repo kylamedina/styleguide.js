@@ -117,7 +117,7 @@ See /test for a demo implementation, and demo export file (index.html). You can 
 and parse them in your custom template.
 
 ### Customize look and feel
-Feel free to use your own look and feel. Include your own css, js or use your own Jade-template.
+Feel free to use your own look and feel. Include your own css, js or use your own pug-template.
 
 ````js
 var StyleGuide = require('styleguidejs');
@@ -126,7 +126,7 @@ sg.addFile("mystyle.css");
 sg.render({
     templateCss: "styleguide/style.css",
     templateJs: "styleguide/script.js",
-    template: "styleguide/template.jade",
+    template: "styleguide/template.pug",
     outputFile: "test/index.html"
 });
 ````
